@@ -288,8 +288,8 @@ typedef struct {
 
 #define TOOLBAR_RESOURCE_PATH "/org/gnome/evince/shell/ui/toolbar.xml"
 
-#define FULLSCREEN_POPUP_TIMEOUT 2
-#define FULLSCREEN_TRANSITION_DURATION 1000 /* in milliseconds */
+#define FULLSCREEN_POPUP_TIMEOUT 0
+#define FULLSCREEN_TRANSITION_DURATION 0 /* in milliseconds */
 
 static const gchar *document_print_settings[] = {
 	GTK_PRINT_SETTINGS_COLLATE,
@@ -663,8 +663,8 @@ update_chrome_visibility (EvWindow *window)
 	set_widget_visibility (priv->toolbar, toolbar);
 	set_widget_visibility (priv->sidebar, sidebar);
 
-	if (toolbar && ev_document_model_get_fullscreen (priv->model))
-		ev_window_fullscreen_show_toolbar (window);
+	//if (toolbar && ev_document_model_get_fullscreen (priv->model))
+	//	ev_window_fullscreen_show_toolbar (window);
 }
 
 static void
